@@ -1,0 +1,44 @@
+<html>
+	<head>
+		
+		<style>body{
+							font-family:calibri;
+					}
+		</style>
+		
+		<script src="jquery-1.11.0.min.js"></script>
+		<script src="connectorLib.js"></script>
+		
+		<script>
+			
+			function makeboxes()
+			{
+					str=placerandom("background: #58F;color:#FFF","A123","A123","FORK","hoverCourse(this,\"A123\");");
+					str+=placerandom("background: #F85;color:#FFF","A123A","A123","A123 red","hoverReq(this,\"A123\");");
+					str+=placerandom("background: #3B6;color:#FFF","A123B","A123","A123 green","hoverReq(this,\"A123\");");
+					str+=placerandom("background: #3B6;color:#FFF","A123C","A123","A123 green","hoverReq(this,\"A123\");");
+
+					str+=placerandom("background: #58F;color:#FFF","B223","B223","FORK","hoverCourse(this,\"B223\");");
+					str+=placerandom("background: #F85;color:#FFF","B223A","B223","B223 red","hoverReq(this,\"B223\");");
+
+					document.getElementById("bonn-tent").innerHTML=str;							
+			}
+
+			function placerandom(stl,bid,textt,cls,hovr)
+			{
+					xk=Math.round(Math.random()*600);
+					yk=Math.round(Math.random()*600);
+					
+					var str;
+					str="<div onmouseover='"+hovr+"' onmouseout='clearHover();' class='"+cls+"' id='"+bid+"' style='line-height: 35px;text-align:center;position:absolute;left:"+xk+";top:"+yk+";width:90;height:35;border-radius:6px;"+stl+"'>";
+					str+=textt+"</div>";
+					
+					return str;
+			}
+
+</script>
+	</head>
+	<body onload="makeboxes();"><span style='position:absolute;z-index:-90' id='bonn-tent'></span><span style='position:absolute;z-index:500' id='content'></span>
+			Hover on anything <span style='font-weight:bold;'>Fool</span>! - Tkong&reg; 
+	</body>
+</html>
