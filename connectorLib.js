@@ -16,6 +16,10 @@
 			Vertical straight-line boxes cross the target element at one end - this needs to be split into two boxes
 	
 			If there ever is a second version it will feature dynamic box sizes.
+			
+	History:
+	
+	    2014-08-25 v0.1 First release with straight and angled lines and two colors but without dynamic boxes
 */
 
 //---------------------------------------------------------------------------------------------------------------
